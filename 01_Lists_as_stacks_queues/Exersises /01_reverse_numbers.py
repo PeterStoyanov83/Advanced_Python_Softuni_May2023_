@@ -1,14 +1,31 @@
-numbers = input().split()  # Read the string of numbers and split them into a list
+# numbers = input().split()  # Read the string of numbers and split them into a list
+#
+# stack = []  # Create an empty stack
+#
+# for number in numbers:
+#     stack.append(number)  # Push each number onto the stack
+#
+# reversed_numbers = []
+# while stack:
+#     reversed_numbers.append(stack.pop())  # Pop each number from the stack and add it to the reversed numbers list
+#
+# reversed_string = " ".join(reversed_numbers)  # Join the reversed numbers list into a string with single spaces
+#
+# print(reversed_string)  # Print the reversed string of numbers
+#
 
-stack = []  # Create an empty stack
+'''solution with deque 1'''
 
-for number in numbers:
-    stack.append(number)  # Push each number onto the stack
+from collections import deque
 
-reversed_numbers = []
-while stack:
-    reversed_numbers.append(stack.pop())  # Pop each number from the stack and add it to the reversed numbers list
+numbers = deque(input().split())
 
-reversed_string = " ".join(reversed_numbers)  # Join the reversed numbers list into a string with single spaces
+for _ in range(len(numbers)):
+    print(numbers.pop(), end=" ")
 
-print(reversed_string)  # Print the reversed string of numbers
+
+'''SOLUTION with deque 2'''
+
+numbers = deque(input().split())
+number = numbers.reverse()
+print(' '.join(numbers))
