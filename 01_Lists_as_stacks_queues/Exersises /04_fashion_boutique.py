@@ -1,18 +1,20 @@
-clothes = list(map(int, input().split()))  # Get the sequence of integers representing the clothes
+from collections import deque
+
+clothes = deque([int(x) for x in input().split()])  # Get the sequence of integers representing the clothes
+
 rack_capacity = int(input())  # Get the capacity of a rack
 
-rack_count = 1  # Initialize the rack count to 1
-current_sum = 0  # Initialize the sum of clothes on the current rack
+racks_count = 1  # Initialize the rack count to 1
+current_rack_space = rack_capacity  # Initialize the sum of clothes on the current rack
 
-stack = []  # Create an empty stack to hold the clothes
+while clothes:
+    cloth = clothes.pop()
 
-for cloth in reversed(clothes):  # Iterate through the clothes from the last piece to the first
-    if current_sum + cloth <= rack_capacity:  # If adding the cloth does not exceed the rack capacity
-        current_sum += cloth  # Add the cloth to the current rack
-        stack.append(cloth)  # Push the cloth onto the stack
-    else:  # If adding the cloth exceeds the rack capacity
-        rack_count += 1  # Increment the rack count
-        current_sum = cloth  # Start a new rack with the current cloth
-        stack = [cloth]  # Create a new stack with the current cloth
+    if current_rack_space >= cloth:
+        current_rack_space -= cloth
 
-print(rack_count)  # Print the number of racks needed
+    else:
+        racks_count += 1
+        current_rack_space = rack_capacity - cloth
+
+print(racks_count)
