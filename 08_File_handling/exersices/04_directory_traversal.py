@@ -30,6 +30,6 @@ def write_report(path, files_by_extension):
                 report.write(f'- - - {filename}.{file_extension}\n')
 
 
-path_to_directory = '/Users/peterstoyanov/Downloads'
+path_to_directory = 'parth to the directory'
 files_by_extension = traverse_directory(path_to_directory)
 write_report(path_to_directory, files_by_extension)
