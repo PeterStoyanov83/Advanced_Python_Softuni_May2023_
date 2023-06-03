@@ -6,10 +6,11 @@ BROWN = (139, 69, 19)
 
 
 class GameBoard:
-    def __init__(self, screen, board_size):
-        self.screen = screen
-        self.board_size = board_size
-        self.grid_size = screen.get_width() // (board_size + 2)  # Calculate grid size based on screen width
+    def __init__(self):
+        ...
+        # self.screen = screen
+        # self.board_size = board_size
+        # self.grid_size = screen.get_width() // (board_size + 2)  # Calculate grid size based on screen width
 
     def draw_board(self, stones):
         self.screen.fill(BROWN)
@@ -21,3 +22,9 @@ class GameBoard:
                 pygame.draw.rect(self.screen, BLACK, (x, y, self.grid_size, self.grid_size), 1)
 
         pygame.display.flip()
+
+gameboard = GameBoard()
+
+gameboard.screen = screen
+gameboard.board_size = board_size
+gameboard.grid_size = screen.get_width() // (board_size + 2)  # Calculate grid size based on screen width

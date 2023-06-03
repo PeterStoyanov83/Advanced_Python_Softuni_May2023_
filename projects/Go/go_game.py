@@ -3,6 +3,7 @@ import game_over_screen
 import openai
 import time
 import random
+
 # Colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -13,6 +14,7 @@ GRID_SIZE = 30
 SCREEN_SIZE = (BOARD_SIZE * GRID_SIZE, BOARD_SIZE * GRID_SIZE)
 
 openai.api_key = "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"
+
 
 class GameBoard:
     def __init__(self, screen, board_size):
