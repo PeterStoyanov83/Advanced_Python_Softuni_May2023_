@@ -1,0 +1,4 @@
+import pyfiglet
+
+text = input()
+
