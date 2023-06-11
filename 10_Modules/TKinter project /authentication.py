@@ -4,7 +4,6 @@ from buying_page import display_products
 from canvas import root, frame
 
 
-
 def render_entry():
     register_button = Button(
         root,
