@@ -1,3 +1,34 @@
+"""
+1 - reding sequenses
+2- while we have elves and materials
+    - first elf
+    - last material
+3 - check if elf is with energy less than 5
+    - remove the elf and don't count it as iteration
+
+4 - increment iterations
+
+5 - check if elf is on iteration 3 (creative elf)
+    - double material needed
+    - double the toys count created
+
+6 - check if elf has energy to create toy
+    - update the total amount of material
+    - decrease the elf energy
+    - give cookie (increase energy + 1)
+    - check if iteration is 5
+        - no cookies for the elf (decrease elf enegry -1 )
+        - current toys count is 0
+7 - add toys to total count
+
+8 - append elf in the end of the list
+
+9 - print the output
+
+
+     """
+
+
 from collections import deque
 
 
